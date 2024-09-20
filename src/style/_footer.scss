@@ -14,14 +14,13 @@
 	}
 	&__logo {
 		margin-right: auto;
-		--icon-width: 97px;
-		--icon-height: 59px;
-		--icon-color: #{$color-primary};
-	
 		@include mob {
-			--icon-width: 77px;
-			--icon-height: 39px;
 			margin-right: 0;
+		}
+		i {
+			--icon-width: 97px;
+			--icon-height: 59px;
+			--icon-color: #{$color-primary};
 		}
 	}
 	&__info {

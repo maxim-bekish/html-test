@@ -571,16 +571,16 @@ i.icon-burger-btn {
 }
 .footer__logo {
   margin-right: auto;
-  --icon-width: 97px;
-  --icon-height: 59px;
-  --icon-color: #42446e;
 }
 @media (max-width: 450px) {
   .footer__logo {
-    --icon-width: 77px;
-    --icon-height: 39px;
     margin-right: 0;
   }
+}
+.footer__logo i {
+  --icon-width: 97px;
+  --icon-height: 59px;
+  --icon-color: #42446e;
 }
 .footer__info {
   display: flex;
