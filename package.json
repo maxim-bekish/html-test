@@ -1,0 +1,15 @@
+{
+  "name": "testWork",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "scss": "npx sass --watch src/style/_index.scss:src/style/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.78.0"
+  }
+}

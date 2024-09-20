@@ -1,0 +1,48 @@
+@mixin wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 140px;
+	margin-block-end: 190px;
+
+	@content;
+	@include des {
+		gap: 110px;
+		margin-block-end: 150px;
+	}
+	@include tab {
+		gap: 90px;
+		margin-block-end: 100px;
+	}
+	@include mob {
+		gap: 50px;
+		margin-block-end: 70px;
+	}
+}
+
+@mixin title {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+	@include mob {
+		gap: 20px;
+	}
+}
+
+@mixin des {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin tab {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mob {
+	@media (max-width: 450px) {
+		@content;
+	}
+}

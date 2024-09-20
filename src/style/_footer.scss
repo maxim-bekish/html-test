@@ -1,0 +1,114 @@
+// Footer
+.footer {
+	&__contact {
+		display: flex;
+		padding-block-end: 40px;
+		border-bottom: 2px solid $color-gray;
+		@include mob {
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			border-bottom: 0;
+			padding-block-end: 0px;
+		}
+	}
+	&__logo {
+		margin-right: auto;
+		--icon-width: 97px;
+		--icon-height: 59px;
+		--icon-color: #{$color-primary};
+	
+		@include mob {
+			--icon-width: 77px;
+			--icon-height: 39px;
+			margin-right: 0;
+		}
+	}
+	&__info {
+		display: flex;
+		gap: 50px;
+		align-items: center;
+		@include tab {
+			gap: 30px;
+		}
+		@include mob {
+			gap: 20px;
+			flex-direction: column;
+		}
+	}
+	&__phone,
+	&__email {
+		font-family: $font-secondary;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26px;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__socials {
+		margin-left: 50px;
+		display: flex;
+		gap: 20px;
+		i {
+			--icon-color: #{$color-primary};
+		}
+		@include tab {
+			margin-left: 30px;
+		}
+		@include mob {
+			margin-left: 0px;
+			gap: 40px;
+		}
+	}
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		padding-block: 60px;
+		@include tab {
+			padding-block: 50px;
+			gap: 30px;
+			align-items: center;
+		}
+		@include mob {
+			flex-direction: column;
+		}
+	}
+	&__list {
+		display: flex;
+		column-gap: 50px;
+		row-gap: 20px;
+		@include tab {
+			column-gap: 30px;
+			flex-wrap: wrap;
+		}
+		@include mob {
+			justify-content: center;
+			row-gap: 15px;
+		}
+	}
+
+	&__link {
+		font-family: $font-secondary;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26px;
+	}
+
+	&__credits {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26px;
+
+		background: $gradient-tertiary;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: $color-transparent;
+		span {
+			background: $color-gray;
+			color: gray;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: $color-transparent;
+		}
+	}
+}

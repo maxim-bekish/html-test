@@ -1,0 +1,40 @@
+// Tech Stack Section
+.tech-stack {
+	@include wrapper;
+
+	&__header {
+		@include title;
+	}
+
+	&__icons {
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(6, auto);
+		row-gap: 50px;
+		@include des {
+			row-gap: 50px;
+		}
+		@include tab {
+			grid-template-columns: repeat(4, auto);
+			row-gap: 30px;
+		}
+		@include mob {
+			grid-template-columns: repeat(3, auto);
+			row-gap: 20px;
+		}
+	}
+	&__icon {
+		width: 120px;
+		aspect-ratio: 1;
+		@include des {
+			width: 100px;
+		}
+		@include tab {
+			width: 100px;
+		}
+		@include mob {
+			width: 60px;
+		}
+
+	}
+}

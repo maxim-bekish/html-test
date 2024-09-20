@@ -1,0 +1,110 @@
+// Projects Section
+.projects {
+	@include wrapper;
+	&__header {
+		@include title;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		row-gap: 60px;
+		column-gap: 50px;
+		justify-items: center;
+		@include des {
+			row-gap: 40px;
+			column-gap: 35px;
+		}
+		@include tab {
+			row-gap: 40px;
+			column-gap: 25px;
+			grid-template-columns: repeat(2, auto);
+		}
+		@include mob {
+			row-gap: 60px;
+			grid-template-columns: auto;
+		}
+		.project {
+			max-width: 375px;
+			display: flex;
+			flex-direction: column;
+			border-radius: 20px;
+			@include des {
+				max-width: 100%;
+			}
+			&__details {
+				padding: 25px 30px;
+				box-shadow: 2px 2px 100px 0px #00000033;
+				display: flex;
+				gap: 20px;
+				border-bottom-right-radius: 20px;
+				border-bottom-left-radius: 20px;
+				flex-direction: column;
+				@include des {
+					gap: 15px;
+					padding: 20px;
+				}
+			}
+
+			&__links {
+				display: flex;
+				justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        gap: 15px;
+			}
+			&__link {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				&:hover {
+					span {
+						&::after {
+							width: 100%;
+						}
+					}
+					i {
+						scale: 1.1;
+					}
+				}
+				span {
+					text-wrap: nowrap;
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 26px;
+					&::after {
+						content: '';
+						display: block;
+						width: 0%;
+						height: 1px;
+						background-color: $color-black;
+						transition: all 200ms ease-in-out;
+					}
+				}
+				i {
+					transition: all 200ms ease-in-out;
+				}
+
+				@include des {
+					i {
+						--icon-width: 25px;
+						--icon-height: 25px;
+					}
+				}
+			}
+
+			&__description {
+				margin-block: 17px 12px;
+			}
+
+			&__tech-stack {
+				font-size: 16px;
+				span {
+					font-size: 14px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+i.icon {
+	$icon-width: var(--icon-width, 30px);
+	$icon-height: var(--icon-height, 30px);
+	$icon-color: var(--icon-color, #000);
+	$icon-img: var(--icon-img, #fff);
+	display: inline-block;
+	width: $icon-width;
+	height: $icon-height;
+	background-color: $icon-color;
+	background-size: cover;
+
+	&-logo {
+		@extend .icon;
+		-webkit-mask: url('../../img/icons/logo.svg') no-repeat center;
+		mask: url('../../img/icons/logo.svg') no-repeat center;
+		mask-size: contain;
+		background-image: $icon-img;
+	}
+
+	&-twitter {
+		@extend .icon;
+		-webkit-mask: url('../../img/icons/twitter.svg') no-repeat center;
+		mask: url('../../img/icons/twitter.svg') no-repeat center;
+		mask-size: contain;
+	}
+
+	&-linkedin {
+		@extend .icon;
+		-webkit-mask: url('../../img/icons/linkedin.svg') no-repeat center;
+		mask: url('../../img/icons/linkedin.svg') no-repeat center;
+		mask-size: contain;
+	}
+
+	&-gitHub {
+		@extend .icon;
+		-webkit-mask: url('../../img/icons/gitHub.svg') no-repeat center;
+		mask: url('../../img/icons/gitHub.svg') no-repeat center;
+		mask-size: contain;
+	}
+
+	&-link {
+		@extend .icon;
+		-webkit-mask: url('../../img/icons/link.svg') no-repeat center;
+		mask: url('../../img/icons/link.svg') no-repeat center;
+		mask-size: contain;
+	}
+	&-burger-btn {
+		@extend .icon;
+		-webkit-mask: url('../../img/icons/burger-btn.svg') no-repeat center;
+		mask: url('../../img/icons/burger-btn.svg') no-repeat center;
+		mask-size: contain;
+	}
+}
